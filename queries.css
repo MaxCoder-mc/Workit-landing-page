@@ -1,0 +1,133 @@
+@media (min-width: 800px) {
+  :root {
+    --container-padding: calc((44 / 16) * 1rem);
+    --container-max-width: 100%;
+    --hero-pic-w: calc((514 / 16) * 1rem);
+    --hero-pic-mb: -13.5rem;
+    --features-pt: 18rem;
+  }
+
+  .hero::before {
+    display: inline-block;
+    content: "";
+    width: 270px;
+    height: 215px;
+    background-image: url("./assets/images/bg-pattern-1.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+
+    position: absolute;
+    left: -9rem;
+  }
+  .hero::after {
+    display: inline-block;
+    content: "";
+    width: 141px;
+    height: 112px;
+    background-image: url("./assets/images/bg-pattern-2.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+
+    position: absolute;
+    top: 12rem;
+    right: -5.5rem;
+  }
+
+  .feature {
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 3.5rem;
+    max-width: 800px;
+  }
+  .feature h2,
+  .feature__paragraph {
+    text-align: start;
+  }
+
+  .cta {
+    flex-direction: row;
+  }
+  .cta__picture {
+    align-self: flex-start;
+  }
+
+  .cta__content {
+    max-width: calc((720 / 16) * 1rem);
+    padding: 3rem;
+    width: 66%;
+    align-items: start;
+    text-align: start;
+
+    margin-left: -6.5rem;
+    margin-top: 10.5rem;
+
+    position: relative;
+  }
+  .cta__content::after {
+    display: inline-block;
+    content: "";
+    width: 200px;
+    height: 200px;
+    background-image: url("./assets/images/bg-pattern-3.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    transform: translate(-25%, 60%);
+  }
+}
+
+@media (min-width: 1200px) {
+  :root {
+    --container-padding: calc((80 / 16) * 1rem);
+    --container-max-width: calc((1440 / 16) * 1rem);
+    --hero-pic-w: calc((767 / 16) * 1rem);
+    --hero-pic-mb: -14.5rem;
+    --features-pt: 19.5rem;
+  }
+
+  .header {
+    padding-top: 3.5rem;
+  }
+
+  .hero::before {
+    left: -4.5rem;
+  }
+  .hero::after {
+    right: -3.5rem;
+    top: 12rem;
+  }
+
+  .features {
+    flex-direction: row;
+    justify-content: center;
+    align-items: start;
+    gap: 1.2rem;
+
+    padding-top: 19.5rem;
+  }
+  .feature {
+    flex-direction: column;
+    justify-content: center;
+    gap: 2rem;
+    flex-basis: 357px;
+  }
+  .feature .heading-2,
+  .feature__paragraph {
+    text-align: center;
+  }
+
+  .cta__picture {
+    width: calc((477 / 16) * 1rem);
+  }
+  .cta__content {
+    max-width: calc((720 / 16) * 1rem);
+    padding: 4rem;
+  }
+
+  .cta__content::after {
+    transform: translate(-25%, 40%);
+  }
+}
